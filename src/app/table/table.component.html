@@ -1,0 +1,13 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th *ngFor="let col of columns">
+                {{col}}
+            </th>
+            <tr *ngFor="let building of buildings | async">
+                <td *ngFor="let col of columns">
+                    {{building[col]}}
+                </td>
+            </tr>
+    </thead>
+    <tbody>
